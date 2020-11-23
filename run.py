@@ -72,6 +72,7 @@ class PC_Ingestion_Event:
         UNIQUE (event_uuid, user_guid, user_site_id, client_type, event_type, status, created_date, updated_date)
         );        
         """
+        self.conn.execute(sql)
 
     def transform(self, df):
         
